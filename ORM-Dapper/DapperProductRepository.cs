@@ -26,8 +26,7 @@ public class DapperProductRepository : IProductRepository
 
     public Product GetProduct(int id)
     {
-        return _conn.QuerySingle<Product>("SELECT * FROM products WHERE ProductID = @id;", 
-            new { id = id });
+        return _conn.QuerySingle<Product>("SELECT * FROM products WHERE ProductID = @id;", new { id = id });
     }
 
     public void UpdateProduct(Product product)
